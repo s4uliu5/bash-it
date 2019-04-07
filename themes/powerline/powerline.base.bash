@@ -97,7 +97,7 @@ function __powerline_scm_prompt {
     elif [[ "${SCM_P4_CHAR}" == "${SCM_CHAR}" ]]; then
       scm_prompt+="${SCM_CHAR}${SCM_BRANCH}${SCM_STATE}"
     elif [[ "${SCM_HG_CHAR}" == "${SCM_CHAR}" ]]; then
-      scm_prompt+="${SCM_CHAR}${SCM_BRANCH}${SCM_STATE}"
+      scm_prompt+="${SCM_CHAR}${SCM_BRANCH}:${SCM_CHANGE}${SCM_STATE}"
     fi
     echo "$(eval "echo ${scm_prompt}")${scm}|${color}"
   fi
